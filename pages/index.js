@@ -1,14 +1,8 @@
-import { Categories, PostCard, PostWidget } from "@/components";
-import { getPosts } from "@/services";
 import Head from "next/head";
+import { Categories, PostCard, PostWidget } from "@/components";
+import { FeaturedPost } from "@/sections";
+import { getPosts } from "@/services";
 
-// const posts = [
-//   { title: "React Testing", excerpt: "Learn React Testing" },
-//   {
-//     title: "React Testing with taildwind",
-//     excerpt: "Learn React Testing with tailwind",
-//   },
-// ];
 export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
@@ -18,6 +12,7 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FeaturedPost />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
           {posts.map((post) => (

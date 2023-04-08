@@ -5,11 +5,18 @@ import {
   Categories,
   Comments,
   CommentsForm,
+  Loader,
   PostDetail,
   PostWidget,
 } from "@/components";
+import { useRouter } from "next/router";
 
 const PostDetails = ({ post }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <>
       <div className="container mx-auto px-10 mb-8">
