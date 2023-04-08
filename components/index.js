@@ -8,4 +8,5 @@ export { default as Author } from "./Author";
 export { default as CommentsForm } from "./CommentsForm";
 export { default as Comments } from "./Comments";
 export { default as FeaturedPostCard } from "./FeaturedPostCard";
+export { default as AdjacentPostCard } from "./AdjacentPostCard";
 export { default as Loader } from "./Loader";
